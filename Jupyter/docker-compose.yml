@@ -1,0 +1,11 @@
+version : '3.7'
+
+services:
+  jupyter:
+    build: .
+    container_name: "IMP_jupyter"
+    volumes:
+      - .:/app
+    ports:
+      - 8889:8888
+    command: start-notebook.py --NotebookApp.token='IMP'

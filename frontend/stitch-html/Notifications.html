@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#3b52bf", "background-light": "#f6f8f8", "background-dark": "#0d1a19", "on-surface-variant": "#414753", "on-tertiary-fixed-variant": "#763400", "on-secondary-container": "#00536e", surface: "#faf9fb", "on-error": "#ffffff", "on-primary": "#ffffff", "on-tertiary-fixed": "#321200", background: "#faf9fb", "surface-container-low": "#f4f3f5", "primary-fixed-dim": "#bac3ff", "surface-dim": "#dad9dc", "surface-container-high": "#e9e8ea", "on-primary-fixed": "#001159", "on-secondary": "#ffffff", tertiary: "#964400", "on-primary-fixed-variant": "#223aa9", "surface-container-highest": "#e3e2e4", "inverse-on-surface": "#f1f0f3", "secondary-fixed": "#bfe9ff", "surface-tint": "#3e54c1", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "primary-container": "#566bd9", "surface-container-lowest": "#ffffff", "surface-bright": "#faf9fb", "surface-container": "#efedf0", "inverse-surface": "#2f3032", "inverse-primary": "#bac3ff", "on-secondary-fixed": "#001f2a", outline: "#717785", error: "#ba1a1a", "on-surface": "#1a1c1d", "outline-variant": "#c1c6d5", "tertiary-fixed-dim": "#ffb68c", "on-error-container": "#93000a", "tertiary-fixed": "#ffdbc9", "surface-variant": "#e3e2e4", "on-tertiary-container": "#fffbff", "on-secondary-fixed-variant": "#004d65", "secondary-container": "#4fcbfd", "primary-fixed": "#dee1ff", secondary: "#006685", "tertiary-container": "#bd5700", "on-primary-container": "#fffbff", "secondary-fixed-dim": "#6dd2ff", "on-background": "#1a1c1d"}, fontFamily: {display: "Inter", sans: ["Plus Jakarta Sans", "sans-serif"], headline: ["Inter"], body: ["Inter"], label: ["Inter"]}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}}}};</script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .filled-icon { font-variation-settings: 'FILL' 1; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-primary/10 bg-white dark:bg-background-dark/50 flex flex-col h-full shrink-0">
+<div class="p-6 flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined font-bold">bolt</span>
+</div>
+<div>
+<h1 class="text-base font-bold leading-none">EcoPower</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Admin Dashboard</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors rounded" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors rounded" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Energy Stats</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary transition-colors rounded" href="#">
+<span class="material-symbols-outlined filled-icon">notifications</span>
+<span class="text-sm font-bold">Announcements</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors rounded" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-sm font-medium">Community</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors rounded" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-primary/10">
+<button class="flex items-center w-full gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Header -->
+<header class="h-16 border-b border-primary/10 bg-white dark:bg-background-dark/30 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-background-light dark:bg-background-dark/50 border border-primary/10 rounded focus:ring-1 focus:ring-primary focus:border-transparent text-sm" placeholder="Search announcements, alerts, or tips..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-4">
+<button class="flex items-center gap-2 bg-primary px-4 py-2 rounded text-white font-bold text-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-lg">add_alert</span>
+                    Post Alert
+                </button>
+<div class="size-10 rounded border border-primary/20 overflow-hidden">
+<img alt="User" data-alt="User profile avatar looking professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMr8aMhqw0RuALzRpFNDEoyWuBi8Kb0RxD6ZeYLdaVFxzhnqAUfHzHtVuwLc6uQMKL4SOJPklXis70_ke4R4zS682lVMEc4oOyCgI3VlzOiaW-O_Z-hFHXw8S11kKyHwj2RRzPsiKFS74XOPOGxwEUXqu-iSWI9BWLJz4Varqo_azmz6w70Jh24t11vOacfpoeHvODm9y0NGlIEOxn6vPCr-48dvYwjw13mSAbyfLkZxjZ3sEDBcBjk6f4UXNnKz4JXnDFCJrDPB4"/>
+</div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- Emergency Alert Section -->
+<section>
+<div class="relative overflow-hidden rounded border border-red-500/30 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20 p-6 flex flex-col md:flex-row items-center gap-6 shadow-lg shadow-red-500/5">
+<div class="size-16 shrink-0 bg-red-600 rounded flex items-center justify-center text-white animate-pulse">
+<span class="material-symbols-outlined text-4xl">warning</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h2 class="text-red-700 dark:text-red-400 text-xl font-extrabold uppercase tracking-tight">Emergency Safety Alert</h2>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mt-1">Solar Battery Fire Warning - Model X-200</h3>
+<p class="text-slate-600 dark:text-slate-300 mt-2 max-w-2xl">
+                            Multiple reports of thermal runaway in Model X-200 units manufactured between Oct-Dec 2023. <strong>Immediate Action Required:</strong> Disconnect battery from grid and switch to manual bypass. 
+                        </p>
+</div>
+<div class="flex flex-col gap-2 shrink-0 w-full md:w-auto">
+<button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded font-bold text-sm transition-colors whitespace-nowrap">View Protocol</button>
+<button class="bg-white/80 dark:bg-slate-800 border border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 px-6 py-2.5 rounded font-bold text-sm transition-colors whitespace-nowrap">Dismiss for now</button>
+</div>
+</div>
+</section>
+<!-- Categories & Recent List -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
+<button class="bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap">All Announcements</button>
+<button class="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap">Community Updates</button>
+<button class="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap">Maintenance</button>
+<button class="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-1.5 rounded-full text-xs font-bold transition-colors whitespace-nowrap">Sustainability Tips</button>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-slate-500 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">history</span>
+                        Recently Updated
+                    </div>
+</div>
+<div class="grid gap-4">
+<!-- Notification Card 1 -->
+<div class="bg-white dark:bg-background-dark/40 border border-primary/10 rounded p-5 flex items-start gap-4 hover:border-primary/30 transition-all hover:shadow-md">
+<div class="size-12 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Community Updates</span>
+<span class="text-xs text-slate-400">2 hours ago</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Neighborhood Solar Share: Q1 Growth Report</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Great news! Our community solar share program has reached 500 households, exceeding our 2024 target by 15%.</p>
+<div class="mt-4 flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-slate-500 hover:text-red-500 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">favorite</span>
+                                    24
+                                </button>
+<button class="flex items-center gap-1.5 text-slate-500 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">push_pin</span>
+                                    Pin
+                                </button>
+<button class="flex items-center gap-1.5 text-slate-500 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">share</span>
+                                    Share
+                                </button>
+</div>
+</div>
+<div class="size-20 rounded overflow-hidden shrink-0 hidden sm:block">
+<img alt="Community Solar" data-alt="Solar panels on residential rooftops in a community" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ7Wia2fMBSXkDHIMqVWqOHq4-zmroQKt8kEkUJzBqvdC-l7bPS2obn4vvTDO-qJUwevKBYtK8XCCeIC3HpiuiFl60KJ4710hlk9IJtr1jTGOVey9B6GGFDU6A0PUhzFCcWpU80kKvLzLErB8HlBrItj199Lr22_JEg3DPhKKxhQkzzBE9XjgGpdbl48dyuu8uN4ehHktuiaD5zUZCpA0DFCwU3RQb3aH82Xqmthc1hd0Z9CR-iRkviwEX8aXFHXYAJYmLOTAojdE"/>
+</div>
+</div>
+<!-- Notification Card 2 -->
+<div class="bg-white dark:bg-background-dark/40 border border-primary/10 rounded p-5 flex items-start gap-4 hover:border-primary/30 transition-all hover:shadow-md">
+<div class="size-12 rounded bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0">
+<span class="material-symbols-outlined">build</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Maintenance</span>
+<span class="text-xs text-slate-400">5 hours ago</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Scheduled Server Update: Sunday 2 AM</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">The dashboard will be offline for 30 minutes for core performance upgrades. Energy tracking will remain active offline.</p>
+<div class="mt-4 flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-slate-500 hover:text-red-500 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">favorite</span>
+                                    8
+                                </button>
+<button class="flex items-center gap-1.5 text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg filled-icon">push_pin</span>
+                                    Pinned
+                                </button>
+<button class="flex items-center gap-1.5 text-slate-500 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">share</span>
+                                    Share
+                                </button>
+</div>
+</div>
+</div>
+<!-- Notification Card 3 -->
+<div class="bg-white dark:bg-background-dark/40 border border-primary/10 rounded p-5 flex items-start gap-4 hover:border-primary/30 transition-all hover:shadow-md">
+<div class="size-12 rounded bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase">Sustainability Tips</span>
+<span class="text-xs text-slate-400">Yesterday</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Maximize Morning Storage</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Adjust your heavy appliance usage to 10 AM - 2 PM to utilize peak solar generation before batteries reach capacity.</p>
+<div class="mt-4 flex items-center gap-4">
+<button class="flex items-center gap-1.5 text-red-500 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg filled-icon">favorite</span>
+                                    112
+                                </button>
+<button class="flex items-center gap-1.5 text-slate-500 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">push_pin</span>
+                                    Pin
+                                </button>
+<button class="flex items-center gap-1.5 text-slate-500 hover:text-primary transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">share</span>
+                                    Share
+                                </button>
+</div>
+</div>
+<div class="size-20 rounded overflow-hidden shrink-0 hidden sm:block">
+<img alt="Eco Tips" data-alt="Green environmental icons and leaf pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmyDBGE-nb1GHjbrJC19gKF8mVIkHL9g7VHT_snmmAnyFtYlXSKMJT1X4jzOLrpord2SAKUyuIQe9Ly8duIeYIIAhwi6ac7KBz5-SHEeOif_44zCcK5yo7d2Kxgci7tRGMU4_ET7tnrIyVqozw26BbeKdIx-phjYVAW8d8oMsKw7rkxMDWLw0QTlnB5-kVeMAq9kjAwtONnbvpiUWdQGpK9VkJNF8OirrVSXxiKAtdfDRUn7WYaohgolTCoNpwHGSaViZkVUCOpWg"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Post Announcement Section -->
+<div class="w-80 border-l border-primary/10 bg-white dark:bg-background-dark/30 flex flex-col h-full shrink-0 overflow-y-auto">
+<div class="p-6 border-b border-primary/10">
+<h3 class="text-lg font-bold">New Post</h3>
+<p class="text-xs text-slate-500">Draft a new community update</p>
+</div>
+<form class="p-6 space-y-4">
+<div class="space-y-1">
+<label class="text-xs font-bold text-slate-500 uppercase">Category</label>
+<select class="w-full bg-background-light dark:bg-background-dark/50 border border-primary/10 rounded py-2 text-sm focus:ring-1 focus:ring-primary">
+<option>Community Update</option>
+<option>Maintenance</option>
+<option>Sustainability Tips</option>
+<option class="text-red-600 font-bold">EMERGENCY ALERT</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold text-slate-500 uppercase">Title</label>
+<input class="w-full bg-background-light dark:bg-background-dark/50 border border-primary/10 rounded py-2 text-sm focus:ring-1 focus:ring-primary" placeholder="Post heading..." type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold text-slate-500 uppercase">Message</label>
+<textarea class="w-full bg-background-light dark:bg-background-dark/50 border border-primary/10 rounded py-2 text-sm focus:ring-1 focus:ring-primary resize-none" placeholder="Write your announcement..." rows="4"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 rounded font-bold text-sm shadow-sm hover:opacity-90 transition-opacity">
+                    Publish Announcement
+                </button>
+</div>
+<div class="p-4 bg-primary/5 rounded border border-dashed border-primary/30 text-center">
+<span class="material-symbols-outlined text-primary text-2xl">upload_file</span>
+<p class="text-[10px] font-medium text-slate-500 mt-1">Upload supporting media (JPG, PNG)</p>
+</div>
+</form>
+<div class="mt-auto p-6 text-[10px] text-slate-400 text-center">
+            All announcements are logged for compliance and auditing.
+        </div>
+</div>
+</div>
+</body></html>

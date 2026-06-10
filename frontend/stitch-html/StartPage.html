@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#c1c6d5",
+              "error": "#ba1a1a",
+              "surface-container": "#efedf0",
+              "surface-bright": "#faf9fb",
+              "primary": "#3b52bf",
+              "outline": "#717785",
+              "secondary-container": "#4fcbfd",
+              "on-secondary-fixed": "#001f2a",
+              "secondary-fixed": "#bfe9ff",
+              "surface-tint": "#3e54c1",
+              "primary-fixed-dim": "#bac3ff",
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f4f3f5",
+              "surface-container-highest": "#e3e2e4",
+              "on-surface": "#1a1c1d",
+              "inverse-primary": "#bac3ff",
+              "primary-fixed": "#dee1ff",
+              "on-tertiary-fixed-variant": "#763400",
+              "tertiary-fixed-dim": "#ffb68c",
+              "primary-container": "#566bd9",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "tertiary": "#964400",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#e9e8ea",
+              "tertiary-fixed": "#ffdbc9",
+              "on-tertiary-fixed": "#321200",
+              "background": "#faf9fb",
+              "inverse-surface": "#2f3032",
+              "on-secondary-fixed-variant": "#004d65",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#bd5700",
+              "secondary-fixed-dim": "#6dd2ff",
+              "secondary": "#006685",
+              "on-surface-variant": "#414753",
+              "surface": "#faf9fb",
+              "on-primary-fixed": "#001159",
+              "on-secondary-container": "#00536e",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#223aa9",
+              "inverse-on-surface": "#f1f0f3",
+              "surface-variant": "#e3e2e4",
+              "on-primary-container": "#fffbff",
+              "on-background": "#1a1c1d",
+              "surface-dim": "#dad9dc",
+              "on-tertiary-container": "#fffbff",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm flex justify-between items-center px-4 h-16 w-full font-['Inter'] antialiased">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="bolt">bolt</span>
+<span class="text-xl font-bold text-blue-700 dark:text-blue-400">EcoSave</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-600 dark:text-blue-400 font-semibold transition-colors" href="#">Hub</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded" href="#">Leaderboard</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded" href="#">Learn</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
+<img alt="User avatar" data-alt="professional headshot of a person with a warm smile in a clean office setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz9LnIoo6QSjapdIeOzALILyFXtWHtKOYQBLlVFAo9_EGwk3PwsjUvxmBMzp02PYi1ai3Bu6k4XVS8k_o54WWxCkcLCFv845EDv0wfYLqxIkL2-fmbFww5kajDbUrIiOz13TbHmpeQdlvloHJLYGDe_eqduxbk2hl4G05TdovzgWNsOCx7ZBgvM8zdkLGumXZCdCa5ru2ELuCPMSbA3SJk6FDprD0R7--R8mbGwa8Y0PiCC8O3O3fRZSSLfHTyRqMJMsTM-bGGwHL7"/>
+</div>
+</div>
+</nav>
+<main class="pt-16 pb-20 md:pb-0">
+<!-- Hero Section: Empowering a Sustainable Future -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="modern wind turbines on a rolling green hill under a clear blue sky during late afternoon sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmfpoXIB1atDwRnn2oRtz2ATgQt6wCM_5MT7ReVo_hEFrpqhAht9FfsPVIn3sce-KBnS_BaVJOWPuubvmHy74thoddzSrhFYg7l6Jon9SlHG3v204J5nSJBsUT2wJRv8Wc7ijMEYBFiz4ONU_DtmMH1qkFzIIspQ7UPAE3A5MheifRlCQlteW1Tkl6f_Wdktip3a6QVH_gyo7TA-XOcLyKpYTzONmCntB8AyX9trUeCS8sDZFN65m70qXl_HKVE9B9GbtYlKlxjEb6"/>
+</div>
+<div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="text-white">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">Empowering a <span class="text-secondary-container">Sustainable</span> Future</h1>
+<p class="text-xl text-blue-100 mb-8 max-w-lg leading-relaxed">Join thousands of community members dedicated to reducing their carbon footprint through smart energy education and real-time monitoring.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-95">Get Started</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">Watch Vision</button>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-2xl">
+<div class="flex items-center justify-between mb-6">
+<span class="text-white font-bold">Community Impact</span>
+<span class="bg-emerald-400 text-slate-900 text-xs font-bold px-2 py-1 rounded">LIVE</span>
+</div>
+<div class="space-y-4">
+<div class="h-2 bg-white/20 rounded-full overflow-hidden">
+<div class="w-[75%] h-full bg-secondary-container"></div>
+</div>
+<p class="text-blue-100 text-sm">75% of goal reached: 1.2M kWh saved this month</p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-white/5 p-4 rounded-lg">
+<span class="block text-2xl font-bold text-white">4.2k</span>
+<span class="text-xs text-blue-200">Active Households</span>
+</div>
+<div class="bg-white/5 p-4 rounded-lg">
+<span class="block text-2xl font-bold text-white">850t</span>
+<span class="text-xs text-blue-200">CO2 Offset</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features: Smart Alerts & Monitoring -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-6">
+<div class="max-w-3xl mb-16">
+<h2 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-4">Smart Alerts &amp; Monitoring</h2>
+<p class="text-on-surface-variant text-lg">Intelligent systems that keep you informed about your energy usage and local grid health in real-time.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Feature Card 1 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="notification_important">notification_important</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Peak Load Alerts</h3>
+<p class="text-on-surface-variant leading-relaxed">Receive instant notifications during peak demand periods to help stabilize the community grid and save on costs.</p>
+</div>
+<!-- Feature Card 2 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Usage Analytics</h3>
+<p class="text-on-surface-variant leading-relaxed">Detailed breakdowns of your energy consumption patterns with AI-driven suggestions for optimization.</p>
+</div>
+<!-- Feature Card 3 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 hover:border-primary transition-all group">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Appliance Health</h3>
+<p class="text-on-surface-variant leading-relaxed">Identify inefficient appliances that are drawing phantom power or operating outside of normal efficiency ranges.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog/Education: Green Energy Tips -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="container mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div class="max-w-2xl">
+<h2 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-4">Green Energy Tips &amp; Education</h2>
+<p class="text-on-surface-variant text-lg">Master the art of sustainable living with our expert-curated guides and community wisdom.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                        View All Articles <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<!-- Bento Blog Grid -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-2xl aspect-square md:aspect-auto">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close up of a smart thermostat on a wall with glowing numbers and modern minimalist interior design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4ujOI4otbfXv533Er8Iyk1eAmGmSn3_dUd8eOc-O4pNCEVDNEt8mzsFXxNt8i0WmDzMBl86_3BNyE4YN3f6qN1s22xQbXLooAYqBnKCh51tHXfe7PV7UQG28C2DHVsXZrNjmAs-ISA-aAdcA9lby3tpYwzUuMGzFA0tPig8-Sq4kZ_IjbTxGvSe-Cfh85Di-Q5f_UMvR0wRi5SzoOEswWCpOSZnYdiWyMVoLPAXeqmGqc70peiS0RaavqHIqVwIkKb7EHaem71EAJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded text-xs font-bold mb-4 inline-block uppercase tracking-wider">Guide</span>
+<h3 class="text-white text-3xl font-bold mb-4 leading-tight">Mastering Your Smart Thermostat for Winter</h3>
+<p class="text-blue-100/80 mb-6 line-clamp-2">Learn how to program your home for maximum comfort while reducing heating bills by up to 15% through strategic scheduling.</p>
+<button class="text-white font-bold flex items-center gap-2">Read Article <span class="material-symbols-outlined" data-icon="trending_flat">trending_flat</span></button>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl aspect-square">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="top view of solar panels on a house roof under bright sunlight with green trees in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCThVJFlSo1EKt2bneEtJTm6P6u2vnkwPnEdsAmUmmIwQLU_YlnfC9b1GP6RC7jQkk9JaEAKr3iV0jnRfsKNuvCn2V35-sl-mNks3agPXp9WzF5TnqwhV5GLtkEV2vVBxhA0Ibw7gR-jTq_8CgS1kReyVr1hYT8N74l3e0xSVniW3Gqw4G3mvTMaLh_GiM7dJKy15xPPgUQr89Qk17YU72jE5dUbnh81o38lWeDdo2NTsnzzN76ZOGpd3Qt8lS5o9To6psbT-kHwstV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-6">
+<h3 class="text-white text-xl font-bold mb-2 leading-tight">Solar Maintenance 101</h3>
+<button class="text-blue-200 text-sm font-bold flex items-center gap-1">5 min read <span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span></button>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl aspect-square">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="a small green plant sprouting from a pile of coins representing financial growth through sustainability" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOfLcpkJmkVt_O6ftQaVrPOPi2blfrn_IFw7cCq905u_S-jKGKqOva0mrz8L2IrgRX-Qnf8OqPKDH9Na77jazqXbVfdtImNR4HWFfKyGR4RngbuoSvdCTjtR5NNnv9RXNvdwhzfJNeVhCnL6ZTrOwK-kXsYCYhv0QMaZrUPMyuNnLEA-8DvKSgmvFi2OhFrwKcFua1T7ECoQhk9RbD3PhuqTIELYRRGg5xhSsVcMpsL4ClV4PVbc6W50pfBLBDWqP4ba0n6fi3AV3I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-6">
+<h3 class="text-white text-xl font-bold mb-2 leading-tight">Tax Incentives for 2024</h3>
+<button class="text-blue-200 text-sm font-bold flex items-center gap-1">8 min read <span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span></button>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container flex flex-col md:flex-row rounded-2xl overflow-hidden border border-outline-variant/30">
+<div class="md:w-1/3 h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="hands holding a smart phone showing energy usage graphs with a blurred modern kitchen in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGl--IqQPFlpx25GgaAnjbcwDtigPDLWut_-ucDEz5rbha0138ZQJ4fEffgEnuQHzjb9CDut1ZuT-dCVPg88jjwT4mZe7d-r7tDyn_vOcq0CI1I-Of-3POvjoVIWwgk3S5f7pWHgyPLonBcYAFmRHm-UGUTsdHQ2cSHKpM1DftlTDCPmUdyC2tE8gfw-eIgi1yzZZTaBXtr7F7GNCmzbD-Bud4WLB1ZJvg23PRANxlwwL4YEi6mb-A8hbldyYQbJdDtisNaKjtw2uG"/>
+</div>
+<div class="p-8 flex-1">
+<h3 class="text-xl font-bold mb-3">Community Spotlight: The Smith Family</h3>
+<p class="text-on-surface-variant mb-6">How one suburban family cut their grid dependence by 60% in just six months using EcoSave tools.</p>
+<a class="text-primary font-bold inline-flex items-center gap-2" href="#">Read Case Study <span class="material-symbols-outlined" data-icon="arrow_forward_ios">arrow_forward_ios</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA & Chatbot: Join the Green Movement -->
+<section class="py-24 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-900/40 rounded-full blur-3xl"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+<h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">Ready to Join the Green Movement?</h2>
+<p class="text-blue-100 text-xl mb-12 leading-relaxed">Join over 50,000 households already making a difference. Start your journey toward energy independence today.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<input class="w-full sm:w-80 px-6 py-4 rounded-xl border-0 ring-2 ring-transparent focus:ring-secondary-container transition-all" placeholder="Enter your email" type="email"/>
+<button class="w-full sm:w-auto bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all">Join the Community</button>
+</div>
+<!-- Chatbot Overlay Preview -->
+<div class="mt-20 flex flex-col items-center">
+<div class="bg-white p-6 rounded-2xl shadow-2xl max-w-xs text-left relative">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<p class="text-sm font-bold">EcoBot</p>
+<p class="text-[10px] text-emerald-500 font-bold uppercase">Online &amp; Helpful</p>
+</div>
+</div>
+<p class="text-sm text-slate-600 mb-4">"Hi! I'm EcoBot. Want to know how much your household can save this year?"</p>
+<div class="flex flex-wrap gap-2">
+<button class="bg-blue-50 text-primary text-xs font-bold py-2 px-3 rounded-lg border border-blue-100">Calculate Savings</button>
+<button class="bg-blue-50 text-primary text-xs font-bold py-2 px-3 rounded-lg border border-blue-100">Local Incentives</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] flex justify-around items-center px-2 pb-safe z-50 font-['Inter'] text-xs font-medium">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1 hover:text-blue-500 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span>Hub</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1 hover:text-blue-500 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-lg px-3 py-1 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span>Learn</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-3 py-1 hover:text-blue-500 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<!-- FAB for Chatbot (Always visible but contextual) -->
+<div class="fixed bottom-20 md:bottom-8 right-6 z-40">
+<button class="w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest py-12 border-t border-outline-variant/30">
+<div class="container mx-auto px-6 grid md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="bolt">bolt</span>
+<span class="text-xl font-bold text-blue-700">EcoSave</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Leading the community-driven transition to sustainable energy through education and smart technology.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Resources</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Education Hub</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Savings Calculator</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Energy Glossary</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Community</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Join Movement</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Local Events</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Leaderboards</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ambassadors</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Chat Support</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="container mx-auto px-6 mt-12 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-on-surface-variant">© 2024 EcoSave Community Initiative. All rights reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="public">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,10 @@
+numpy
+matplotlib
+pandas
+seaborn
+scikit-learn
+scipy
+openmeteo-requests
+requests-cache
+retry-requests
+pvlib

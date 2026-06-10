@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1978e5",
+                        "primary-container": "#e0efff",
+                        "on-primary-container": "#001d3d",
+                        "secondary": "#535f70",
+                        "secondary-container": "#d7e3f7",
+                        "on-secondary-container": "#101c2b",
+                        "tertiary": "#6b5778",
+                        "tertiary-container": "#f2daff",
+                        "on-tertiary-container": "#251431",
+                        "surface": "#f8f9ff",
+                        "on-surface": "#191c20",
+                        "surface-variant": "#dee3eb",
+                        "on-surface-variant": "#42474e",
+                        "outline": "#72777f",
+                        "outline-variant": "#c2c7cf",
+                        "surface-container-low": "#f0f3fa",
+                        "surface-container": "#ebf0f7",
+                        "surface-container-high": "#e5eaf2",
+                        "surface-container-highest": "#dfe4eb",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9ff",
+                        "on-background": "#191c20",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "4px", "lg": "4px", "xl": "4px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .brand-glow {
+            background: linear-gradient(135deg, #1978e5 0%, #63a4ff 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9ff;
+            color: #191c20;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<!-- TopAppBar Navigation -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9ff]/80 dark:bg-stone-900/80 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-[#191c20] dark:text-[#f8f9ff]">EcoPower</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#191c20]/60 dark:text-[#f8f9ff]/60 hover:bg-primary/10 transition-colors px-3 py-1 rounded-sm font-bold" href="#">Dashboard</a>
+<a class="text-primary dark:text-[#63a4ff] font-bold" href="#">Impact Lab</a>
+<a class="text-[#191c20]/60 dark:text-[#f8f9ff]/60 hover:bg-primary/10 transition-colors px-3 py-1 rounded-sm font-bold" href="#">Community</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-primary/10 transition-colors rounded-full">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="Profile" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5xMo1CUH9-o7-R4lfqH39IUOySDwzCC-mQdQe8IqrHLxwsEgRuOHAlu7UlXIIVMeU3FqgP-9Eg-Oy8mVfWoyUx8GHMIBklOKnynsI-QHsAbxHutIAuNjN4-pO3Y6SBwoS2htRfs47sut7UlyuvqCWgU2H3oBP_OQ_VAawEoa13RGx-mP_kJbe5h4FwAq-0iqNQ-6NVeMAXl_0opg_3WUXWFA9S3f3NGh1SjsO5tIHDwGS54Koh2Vgwm9d45HdSKoc0UIKrjF7QDw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Sidebar (Visible on Desktop) -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-72 bg-[#f8f9ff] flex-col py-8 px-6 gap-8 z-40 pt-24 border-r border-outline-variant/30">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">science</span>
+</div>
+<div>
+<p class="font-black text-xl text-[#191c20]">The Living Lab</p>
+<p class="text-xs font-bold text-primary tracking-widest uppercase">Energy Pioneer</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<div class="flex items-center gap-3 p-3 text-[#191c20]/70 font-medium uppercase text-sm tracking-wide hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+        </div>
+<div class="flex items-center gap-3 p-3 text-primary font-bold uppercase text-sm tracking-wide border-r-4 border-primary bg-gradient-to-r from-primary/5 to-transparent">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">eco</span> Impact Lab
+        </div>
+<div class="flex items-center gap-3 p-3 text-[#191c20]/70 font-medium uppercase text-sm tracking-wide hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined">group</span> Community
+        </div>
+<div class="flex items-center gap-3 p-3 text-[#191c20]/70 font-medium uppercase text-sm tracking-wide hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined">military_tech</span> Badges
+        </div>
+<div class="flex items-center gap-3 p-3 text-[#191c20]/70 font-medium uppercase text-sm tracking-wide hover:translate-x-1 transition-transform duration-300">
+<span class="material-symbols-outlined">settings</span> Settings
+        </div>
+</nav>
+<div class="mt-auto">
+<button class="w-full brand-glow text-white font-bold py-4 px-6 rounded shadow-lg shadow-primary/10 hover:scale-[0.98] transition-transform">
+            View Impact Report
+        </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 pt-28 pb-12 px-6 max-w-[1200px]">
+<!-- Header / Back Navigation -->
+<div class="mb-12 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-primary font-bold mb-2">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="text-sm tracking-widest uppercase">Back to Leaderboard</span>
+</div>
+<h1 class="text-5xl font-black text-on-surface tracking-tighter">Your Achievement Lab</h1>
+</div>
+<div class="hidden md:block">
+<div class="bg-surface-container-low px-6 py-4 rounded flex items-center gap-4 border border-outline-variant/30">
+<div class="text-right">
+<p class="text-xs uppercase font-bold text-on-surface/50 tracking-widest">Global Status</p>
+<p class="font-black text-xl text-on-surface">Master Tier</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Bento Grid: Personal Stats & Rank -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- 1. Energy Saved Summary -->
+<div class="bg-surface-container-lowest rounded p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group border border-outline-variant/20">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/5 rounded-full group-hover:scale-110 transition-transform duration-700"></div>
+<h3 class="text-xs font-black uppercase tracking-[0.2em] text-on-surface/40 mb-8">Monthly Energy Saved</h3>
+<div class="relative w-48 h-48 mb-8">
+<!-- Progress Circle Background -->
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-high" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.9" stroke-dashoffset="138" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-4xl font-black text-on-surface">194</span>
+<span class="text-sm font-bold text-on-surface/60">kWh</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>78% of Monthly Goal</span>
+</div>
+</div>
+<!-- 2. Community Rank Deep Dive -->
+<div class="bg-primary text-white rounded p-8 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-20">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'opsz' 48;">leaderboard</span>
+</div>
+<div>
+<h3 class="text-xs font-black uppercase tracking-[0.2em] opacity-60 mb-1">Community Rank</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-7xl font-black">12</span>
+<span class="text-2xl font-bold opacity-80">/ 5,000</span>
+</div>
+</div>
+<div class="mt-8 bg-white/10 backdrop-blur-md rounded p-4 flex items-center justify-between">
+<div>
+<p class="text-xs font-bold uppercase opacity-80 mb-1">Weekly Trend</p>
+<p class="text-xl font-black">Up 2 spots</p>
+</div>
+<div class="bg-primary-container text-primary p-2 rounded">
+<span class="material-symbols-outlined font-black">expand_less</span>
+</div>
+</div>
+</div>
+<!-- 5. Energy Production vs Consumption -->
+<div class="md:col-span-2 bg-surface-container-low rounded p-8 border border-outline-variant/20">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-2xl font-black text-on-surface tracking-tight">System Efficiency</h3>
+<p class="text-on-surface/60 font-medium">Real-time production vs. house load</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface/60">Solar</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface/60">Load</span>
+</div>
+</div>
+</div>
+<!-- Chart Placeholder Visual -->
+<div class="h-48 w-full flex items-end gap-2 px-2">
+<div class="flex-1 flex flex-col gap-1 justify-end items-center">
+<div class="w-full bg-primary rounded-t-sm h-[60%] opacity-80"></div>
+<div class="w-full bg-secondary/30 rounded-t-sm h-[40%]"></div>
+</div>
+<div class="flex-1 flex flex-col gap-1 justify-end items-center">
+<div class="w-full bg-primary rounded-t-sm h-[80%] opacity-80"></div>
+<div class="w-full bg-secondary/30 rounded-t-sm h-[30%]"></div>
+</div>
+<div class="flex-1 flex flex-col gap-1 justify-end items-center">
+<div class="w-full bg-primary rounded-t-sm h-[70%] opacity-80"></div>
+<div class="w-full bg-secondary/30 rounded-t-sm h-[55%]"></div>
+</div>
+<div class="flex-1 flex flex-col gap-1 justify-end items-center">
+<div class="w-full bg-primary rounded-t-sm h-[90%] opacity-80"></div>
+<div class="w-full bg-secondary/30 rounded-t-sm h-[25%]"></div>
+</div>
+<div class="flex-1 flex flex-col gap-1 justify-end items-center">
+<div class="w-full bg-primary rounded-t-sm h-[65%] opacity-80"></div>
+<div class="w-full bg-secondary/30 rounded-t-sm h-[45%]"></div>
+</div>
+<div class="flex-1 flex flex-col gap-1 justify-end items-center">
+<div class="w-full bg-primary rounded-t-sm h-[75%] opacity-80"></div>
+<div class="w-full bg-secondary/30 rounded-t-sm h-[35%]"></div>
+</div>
+<div class="flex-1 flex flex-col gap-1 justify-end items-center">
+<div class="w-full bg-primary rounded-t-sm h-[85%] opacity-80"></div>
+<div class="w-full bg-secondary/30 rounded-t-sm h-[50%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Badges & Social -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- 3. Achievements & Badges -->
+<section class="bg-surface-container-lowest rounded p-8 border border-outline-variant/30">
+<h3 class="text-xs font-black uppercase tracking-[0.2em] text-on-surface/40 mb-6">Badges &amp; Achievements</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded flex flex-col items-center text-center">
+<div class="w-14 h-14 bg-tertiary-container rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-on-tertiary-container" data-weight="fill" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+</div>
+<p class="font-bold text-sm text-on-surface leading-tight">Solar Spark</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded flex flex-col items-center text-center">
+<div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">energy_savings_leaf</span>
+</div>
+<p class="font-bold text-sm text-on-surface leading-tight">Vampire Slayer</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded flex flex-col items-center text-center">
+<div class="w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-on-secondary-container" data-weight="fill" style="font-variation-settings: 'FILL' 1;">groups_3</span>
+</div>
+<p class="font-bold text-sm text-on-surface leading-tight">Community Hero</p>
+</div>
+<div class="bg-surface-container-high/50 p-4 rounded flex flex-col items-center text-center opacity-50 border-2 border-dashed border-outline-variant">
+<div class="w-14 h-14 rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-on-surface-variant">lock</span>
+</div>
+<p class="font-bold text-xs text-on-surface leading-tight">Grid Guard</p>
+</div>
+</div>
+<button class="w-full mt-6 py-2 text-primary font-bold text-sm hover:underline">View All 18 Badges</button>
+</section>
+<!-- 4. Kudos & Cheers -->
+<section class="flex flex-col gap-4">
+<h3 class="text-xs font-black uppercase tracking-[0.2em] text-on-surface/40">Community Cheers</h3>
+<div class="flex flex-col gap-3">
+<!-- Social Item 1 -->
+<div class="bg-surface-container-lowest rounded p-4 flex gap-4 shadow-sm border border-outline-variant/30">
+<div class="w-10 h-10 rounded-full overflow-hidden shrink-0">
+<img alt="Avatar" data-alt="Female user community member avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkZEGl12MuVKm4z91VqJywyBUElJ-K-cQZzd-nUl32IJpxKHZzPRH7CdeD5lqzLJDtPSZJa_KWgjgb11vqRULqrW8NMc64hwzTG4gdQXvc5M1pcxlW8MJiHd0Ctgr4C4VrrcLNgsLEI_bxg9S-NBhbvokDczp23pV4nWaEXun2E04e9OmR4zlHQ0MKt7iFJ0MMJSW5_abmLrT9EkqN0ixwBZNwHYHsMeDj_-KWe8F0wukZxQ9MyHyCnzfy4YdeiVYvls7Iad_RAso"/>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-bold text-on-surface">Sarah J. <span class="text-on-surface/40 font-medium">clapped for your</span> Solar Spark!</p>
+<div class="flex items-center gap-3 mt-1">
+<button class="flex items-center gap-1 text-xs font-bold text-primary">
+<span class="material-symbols-outlined text-sm" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span> 12
+                                </button>
+<button class="flex items-center gap-1 text-xs font-bold text-on-surface/40">
+<span class="material-symbols-outlined text-sm">reply</span> Reply
+                                </button>
+</div>
+</div>
+</div>
+<!-- Social Item 2 -->
+<div class="bg-surface-container-lowest rounded p-4 flex gap-4 shadow-sm border border-outline-variant/30">
+<div class="w-10 h-10 rounded-full overflow-hidden shrink-0">
+<img alt="Avatar" data-alt="Male user community member avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKoJC9VGponeEFFP040BOsKRDm6Qem1DREB3_G08sPrZ3StplVp78149A-CP-qLi_J0rgyB7a_ySnD7T073DMVJi_u0VXg2OSv6wZSfpNHpeLn9RlSYenHitsB3ZCcfC5EZzj_5pU4VhT64aWpbKcWEVryy79kZ4gAOcf5ctJ_V_s4E0woRd6AjrLfv7euAgIklfjH5vIhDJyTirLtxArwWEB6qrWnX12TErJ5HZM0IPyXj_12NVvHOo4PhFFnaORSufMBfgrUcXQ"/>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-bold text-on-surface">Marcus T.</p>
+<p class="text-sm text-on-surface/70 italic">"Rank 12 is huge! I'm chasing your stats this month!"</p>
+<div class="flex items-center gap-3 mt-1">
+<button class="flex items-center gap-1 text-xs font-bold text-on-surface/40">
+<span class="material-symbols-outlined text-sm">favorite</span> 4
+                                </button>
+<button class="flex items-center gap-1 text-xs font-bold text-on-surface/40">
+<span class="material-symbols-outlined text-sm">reply</span> Reply
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Visible on Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface-container-lowest py-3 px-6 flex justify-between items-center z-50 border-t border-outline-variant/20">
+<div class="flex flex-col items-center gap-1 text-[#191c20]/60">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Dash</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Impact</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#191c20]/60">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Social</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#191c20]/60">
+<span class="material-symbols-outlined">military_tech</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Badges</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#191c20]/60">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</div>
+</nav>
+</body></html>

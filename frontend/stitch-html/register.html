@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VoltCommunity - Create Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffdbc9",
+              "tertiary-container": "#bd5700",
+              "on-secondary": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#763400",
+              "error": "#ba1a1a",
+              "tertiary-fixed-dim": "#ffb68c",
+              "surface-bright": "#faf9fb",
+              "surface-tint": "#3e54c1",
+              "on-error-container": "#93000a",
+              "on-primary-fixed": "#001159",
+              "primary-fixed-dim": "#bac3ff",
+              "on-tertiary-container": "#fffbff",
+              "on-primary-fixed-variant": "#223aa9",
+              "primary-container": "#566bd9",
+              "on-surface": "#1a1c1d",
+              "outline-variant": "#c1c6d5",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e3e2e4",
+              "on-background": "#1a1c1d",
+              "secondary-container": "#4fcbfd",
+              "on-secondary-fixed": "#001f2a",
+              "surface-variant": "#e3e2e4",
+              "on-secondary-container": "#00536e",
+              "surface-container-high": "#e9e8ea",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#efedf0",
+              "background": "#faf9fb",
+              "primary": "#3b52bf",
+              "surface-dim": "#dad9dc",
+              "on-surface-variant": "#414753",
+              "secondary-fixed": "#bfe9ff",
+              "on-secondary-fixed-variant": "#004d65",
+              "inverse-surface": "#2f3032",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#f1f0f3",
+              "tertiary": "#964400",
+              "surface-container-low": "#f4f3f5",
+              "surface": "#faf9fb",
+              "secondary-fixed-dim": "#6dd2ff",
+              "on-tertiary-fixed": "#321200",
+              "on-error": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "secondary": "#006685",
+              "inverse-primary": "#bac3ff",
+              "primary-fixed": "#dee1ff",
+              "outline": "#717785"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar Shell Suppression Check: Transactional page logic usually hides nav, 
+         but User specifically requested the TopAppBar from COMPONENTS_79 -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 font-['Inter'] antialiased">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-blue-900 dark:text-blue-100">VoltCommunity</div>
+<nav class="hidden md:flex space-x-6 items-center">
+<a class="text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-700 hover:text-blue-800 dark:hover:text-blue-300 transition-colors active:opacity-70" href="#">Sign In</a>
+</nav>
+<button class="md:hidden text-slate-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content: Split Screen Layout -->
+<main class="flex-grow flex flex-col md:flex-row pt-[72px]">
+<!-- Left Side: Inspiring Image (Desktop Only Side-by-Side) -->
+<section class="hidden md:flex md:w-1/2 relative overflow-hidden bg-primary">
+<img alt="Renewable Energy Landscape" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="Modern wind turbines standing tall in a vibrant green rolling field under a bright blue sky with soft wispy clouds, clean and inspiring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtAtG84CNb-rG_3eGg3hR3L8_FFt9Zew-C-dunmb4b44o3RX8vgy9uVF1jDb6hQkgFr1i6SSa9-zv6K6kzZcFr3npkYkHfGSyKEX2FELClukOItRDWmUFPNPkMg0PsyrMkkBxCJyNmhkPDHeH8lN7NAcsjhNhkjOmP3asbOXdHg1YTfawrg6gjLV66QEVSCUiZhB9Y6xTljH6yP7XVZs_y5Ig152NH-sVauqJ2X3y-bDG870DZKFpuy-KTN5uK-cVCrQLg2M_K0AAI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+<div class="relative z-10 flex flex-col justify-center px-16 text-white max-w-2xl">
+<h1 class="text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Powering a sustainable future for everyone.
+                </h1>
+<p class="text-xl text-blue-50 font-medium">
+                    Join the movement towards cleaner, more efficient energy for our local communities.
+                </p>
+</div>
+</section>
+<!-- Right Side: Registration Form -->
+<section class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-16 bg-white">
+<div class="w-full max-w-md space-y-8">
+<div class="text-center md:text-left">
+<h2 class="text-3xl font-bold text-on-surface tracking-tight mb-2">Create Account</h2>
+<p class="text-on-surface-variant">Start your journey with EcoSave today.</p>
+</div>
+<form class="space-y-4">
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-on-surface-variant ml-1" for="full_name">Full Name</label>
+<input class="w-full px-4 py-3 rounded-[0.25rem] border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="full_name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-on-surface-variant ml-1" for="email">Email Address</label>
+<input class="w-full px-4 py-3 rounded-[0.25rem] border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="email" placeholder="name@company.com" type="email"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-on-surface-variant ml-1" for="password">Password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-[0.25rem] border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-sm font-semibold text-on-surface-variant ml-1" for="confirm_password">Confirm Password</label>
+<input class="w-full px-4 py-3 rounded-[0.25rem] border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" id="confirm_password" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full py-3.5 bg-[#1978e5] text-white font-bold rounded-[4px] hover:bg-blue-700 active:scale-[0.98] transition-all shadow-lg shadow-blue-500/20 mt-4" type="submit">
+                        Create Account
+                    </button>
+</form>
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-4 bg-white text-on-surface-variant font-medium">Or sign up with</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 px-4 py-3 border border-outline-variant rounded-[4px] hover:bg-surface-container-low transition-colors text-on-surface font-medium">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+                        Google
+                    </button>
+<button class="flex items-center justify-center gap-3 px-4 py-3 border border-outline-variant rounded-[4px] hover:bg-surface-container-low transition-colors text-on-surface font-medium">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M17.05 20.28c-.98.95-2.05 1.61-3.21 1.61-1.13 0-1.78-.65-2.9-.65-1.13 0-1.89.63-2.89.65-1.12.02-2.2-.7-3.21-1.61C2.93 18.52 1 15.35 1 12.15c0-3.24 2.1-4.96 4.14-4.96 1.08 0 1.94.63 2.76.63.8 0 1.89-.73 3.12-.73 1.34 0 2.45.68 3.17 1.76-2.63 1.54-2.19 5.2.53 6.31-.62 1.59-1.44 3.15-2.67 5.12zM12.03 7.25c-.02-2.23 1.84-4.04 4.07-4.09.02 2.23-1.84 4.04-4.07 4.09z"></path>
+</svg>
+                        Apple
+                    </button>
+</div>
+<div class="pt-6 text-center">
+<p class="text-on-surface-variant font-medium">
+                        Already have an account? 
+                        <a class="text-[#1978e5] font-bold hover:underline transition-all" href="#">Sign In</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell from COMPONENTS_79 -->
+<footer class="w-full bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 font-['Inter'] text-sm">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-6 w-full max-w-7xl mx-auto">
+<div class="text-slate-500 dark:text-slate-500 mb-4 md:mb-0">
+                © 2024 VoltCommunity Energy. All rights reserved.
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200" href="#">Help Center</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-200" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>

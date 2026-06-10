@@ -1,0 +1,364 @@
+
+ <!DOCTYPE html>
+
+    <html class="light" lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Personalized Energy Tips | EnergyWise</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-surface-variant": "#414753",
+                            "outline-variant": "#c1c6d5",
+                            "on-secondary-container": "#003389",
+                            "surface-dim": "#d8dae3",
+                            "background": "#f9f9ff",
+                            "surface-variant": "#e0e2ec",
+                            "on-error": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "tertiary-container": "#b75b00",
+                            "on-error-container": "#93000a",
+                            "on-tertiary-fixed": "#301400",
+                            "surface": "#f9f9ff",
+                            "primary-fixed": "#75ff69",
+                            "inverse-surface": "#2d3038",
+                            "secondary-fixed": "#dbe1ff",
+                            "surface-bright": "#f9f9ff",
+                            "on-primary": "#ffffff",
+                            "outline": "#717785",
+                            "secondary": "#365ab3",
+                            "on-tertiary-container": "#fffbff",
+                            "on-primary-fixed-variant": "#005307",
+                            "surface-container": "#ecedf7",
+                            "primary": "#006c0c",
+                            "on-secondary-fixed-variant": "#174199",
+                            "surface-tint": "#006e0c",
+                            "tertiary-fixed-dim": "#ffb785",
+                            "error": "#ba1a1a",
+                            "inverse-primary": "#19e52d",
+                            "inverse-on-surface": "#eff0fa",
+                            "primary-container": "#008812",
+                            "on-primary-fixed": "#002201",
+                            "on-background": "#181c22",
+                            "surface-container-lowest": "#ffffff",
+                            "surface-container-low": "#f2f3fd",
+                            "on-secondary-fixed": "#001849",
+                            "tertiary": "#924800",
+                            "on-surface": "#181c22",
+                            "secondary-container": "#7fa0fd",
+                            "secondary-fixed-dim": "#b3c5ff",
+                            "on-secondary": "#ffffff",
+                            "tertiary-fixed": "#ffdcc6",
+                            "on-tertiary-fixed-variant": "#723700",
+                            "on-tertiary": "#ffffff",
+                            "primary-fixed-dim": "#19e52d",
+                            "surface-container-high": "#e6e8f1",
+                            "surface-container-highest": "#e0e2ec",
+                            "on-primary-container": "#f8fff0"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "fontFamily": {
+                            "headline": ["Inter"],
+                            "body": ["Inter"],
+                            "label": ["Inter"]
+                        }
+                    },
+                },
+            }
+        </script>
+    <style>
+            body { font-family: 'Inter', sans-serif; }
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+        </style>
+    </head>
+    <body class="bg-background text-on-background">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
+    <div class="flex justify-between items-center w-full px-6 py-3 max-w-7xl mx-auto font-['Inter'] antialiased">
+    <div class="text-2xl font-black text-blue-700 dark:text-blue-400">EnergyWise</div>
+    <nav class="hidden md:flex items-center space-x-8">
+    <a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Dashboard</a>
+    <a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Savings</a>
+    <a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Community</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+    <div class="relative hidden sm:block">
+    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+    <input class="pl-10 pr-4 py-1.5 rounded-lg border border-slate-200 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm" placeholder="Search tips..." type="text"/>
+    </div>
+    <button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-150 rounded-full">
+    <span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+    </button>
+    <div class="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
+    <img alt="User profile" data-alt="professional portrait of a user for a clean user interface profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyDSOOJz78hiKwicckiC4WQO8sg4copfGxeEnN82-Bhh1Q21rNVMCAOYiMbuEhErcKMnHXDcC__oLwGnyQ89dL3Y1Af35kqZZUU6esPeZwyvhQeibmYjcmK4t7NB9rKGXCJ5SD8UQnpFkk3HKXr3tXZwvfWIl-ip5uGO6wVteS6Hd8Q7__WgmdNZMr-QXLUUFPFlJOzpPIaJ1A4z83ZbTywSYL9GmzOcFuBx22EIrxjfpohPM_ZDv7D7pktgxEL5d2y_AMKCkXfxfk"/>
+    </div>
+    </div>
+    </div>
+    </header>
+    <!-- SideNavBar -->
+    <aside class="hidden md:flex flex-col h-full fixed left-0 top-0 pt-16 bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 w-64 font-['Inter'] text-sm font-medium">
+    <div class="px-6 py-8">
+    <div class="flex items-center space-x-3 mb-1">
+    <div class="w-8 h-8 rounded-lg bg-blue-700 flex items-center justify-center text-white">
+    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+    </div>
+    <h2 class="text-xl font-bold text-blue-800 dark:text-blue-300">Energy Tips</h2>
+    </div>
+    <p class="text-slate-500 text-xs pl-11">Save more today</p>
+    </div>
+    <nav class="flex-1 px-4 space-y-1">
+    <a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 hover:pl-2 transition-all duration-200 rounded-lg" href="#">
+    <span class="material-symbols-outlined">dashboard</span>
+    <span>Dashboard</span>
+    </a>
+    <a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 hover:pl-2 transition-all duration-200 rounded-lg" href="#">
+    <span class="material-symbols-outlined">trophy</span>
+    <span>Leaderboard</span>
+    </a>
+    <a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold border-r-4 border-blue-700 hover:pl-2 transition-all duration-200 rounded-lg" href="#">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+    <span>Energy saving tips</span>
+    </a>
+    <a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 hover:pl-2 transition-all duration-200 rounded-lg" href="#">
+    <span class="material-symbols-outlined">science</span>
+    <span>Energy Lab</span>
+    </a>
+    <a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 hover:pl-2 transition-all duration-200 rounded-lg" href="#">
+    <span class="material-symbols-outlined">groups</span>
+    <span>Community</span>
+    </a>
+    <a class="flex items-center space-x-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 hover:pl-2 transition-all duration-200 rounded-lg" href="#">
+    <span class="material-symbols-outlined">settings</span>
+    <span>Settings</span>
+    </a>
+    </nav>
+    <div class="p-6 mt-auto">
+    <button class="w-full py-2.5 px-4 bg-blue-700 text-white rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-blue-800 transition-colors">
+                    Upgrade Plan
+                </button>
+    </div>
+    </aside>
+    <!-- Main Content Canvas -->
+    <main class="pt-24 pb-12 px-6 md:pl-80 max-w-7xl mx-auto">
+    <div class="max-w-5xl mx-auto">
+    <!-- Header Section -->
+    <section class="mb-12">
+    <h1 class="text-4xl font-extrabold text-on-background tracking-tight mb-2">Your Personal Energy Advisor</h1>
+    <p class="text-on-surface-variant max-w-2xl text-lg">We analyze your energy patterns to provide tailored tips that fit your lifestyle and help you save on your next bill.</p>
+    </section>
+    <!-- Personalization Hub & Filter Combined Bento -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+    <!-- Set Your Schedule Card -->
+    <div class="lg:col-span-2 bg-white rounded-lg border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
+    <div>
+    <div class="flex items-center space-x-2 mb-4">
+    <span class="material-symbols-outlined text-blue-700" style="font-variation-settings: 'FILL' 1;">timer</span>
+    <h3 class="text-xl font-bold text-on-background">Set Your Schedule</h3>
+    </div>
+    <p class="text-sm text-on-surface-variant mb-6">Tell us when you are most active at home to receive time-sensitive saving opportunities.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+    <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Time From</label>
+    <input class="w-full rounded border-slate-200 bg-slate-50 px-4 py-2.5 focus:ring-blue-500 focus:border-blue-500" type="time" value="16:00"/>
+    </div>
+    <div>
+    <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Time To</label>
+    <input class="w-full rounded border-slate-200 bg-slate-50 px-4 py-2.5 focus:ring-blue-500 focus:border-blue-500" type="time" value="18:00"/>
+    </div>
+    </div>
+    </div>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center space-x-3">
+    <button class="relative inline-flex h-6 w-11 items-center rounded-full bg-blue-700">
+    <span class="inline-block h-4 w-4 translate-x-6 transform rounded-full bg-white transition"></span>
+    </button>
+    <span class="text-sm font-medium text-slate-700">Show only tips for my schedule</span>
+    </div>
+    <button class="w-full sm:w-auto px-6 py-2.5 bg-blue-700 text-white rounded-lg font-bold hover:bg-blue-800 transition-colors flex items-center justify-center space-x-2">
+    <span>Get Tailored Tips</span>
+    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </button>
+    </div>
+    </div>
+    <!-- Stats/Category Quick Info Card -->
+    <div class="bg-blue-700 rounded-lg p-6 text-white shadow-lg relative overflow-hidden">
+    <div class="relative z-10">
+    <h3 class="text-lg font-bold mb-1">Impact Overview</h3>
+    <p class="text-blue-100 text-sm mb-6">Following your personalized tips could save you up to:</p>
+    <div class="text-5xl font-black mb-2">$42<span class="text-xl font-normal">/mo</span></div>
+    <div class="w-full bg-blue-800 h-2 rounded-full mt-6 overflow-hidden">
+    <div class="bg-white h-full" style="width: 65%;"></div>
+    </div>
+    <p class="text-xs text-blue-200 mt-2">65% of potential savings achieved this week</p>
+    </div>
+    <!-- Decorative background icon -->
+    <span class="material-symbols-outlined absolute -bottom-6 -right-6 text-blue-600 opacity-30 text-[120px]" style="font-variation-settings: 'FILL' 1;">insights</span>
+    </div>
+    </div>
+    <!-- Filtering & Search Section -->
+    <div class="mb-8">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <div class="flex flex-wrap gap-2">
+    <button class="px-4 py-1.5 rounded-full bg-blue-700 text-white text-sm font-medium">All Tips</button>
+    <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:border-blue-300">Electricity</button>
+    <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:border-blue-300">Water</button>
+    <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:border-blue-300">Heating</button>
+    <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:border-blue-300">Solar</button>
+    <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:border-blue-300">Kitchen</button>
+    <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:border-blue-300">Laundry</button>
+    </div>
+    </div>
+    </div>
+    <!-- Tips Feed Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Tip Card 1 -->
+    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+    <div class="h-40 relative">
+    <img class="w-full h-full object-cover" data-alt="Close up of a smart thermostat on a minimalist white wall with soft natural lighting and modern design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDav2CwnH7_sK8zJshe51W_8peePokZF0VTHkhWK4i9wTp6MyPQHEPLQwlT7VIgerogydLfGW2KApRyJz3yJ12ag0hVp0Qu30a9fJWKMeYzJV3IRKeiV2oWa87-F4U-Ax6lGsdMOI6ZvnRpLpgSJmFcXoENTx8zTeXXCl5391lz6ncX43yLvfGfmYlKhKYHzBZM8gpSeZXbXmeBMfDlCX4dU8vlqKVRW8ecGpaeqHHR_uXAbSiG9eFv59K8AMOMPzzBhUthr6eSoNHA"/>
+    <div class="absolute top-3 left-3 flex gap-2">
+    <span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] font-bold uppercase rounded tracking-wider">High Impact</span>
+    <span class="px-2 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase rounded tracking-wider">4 PM - 6 PM</span>
+    </div>
+    </div>
+    <div class="p-5">
+    <h4 class="text-lg font-bold text-on-background mb-2 group-hover:text-blue-700 transition-colors">Optimize Peak Hour Cooling</h4>
+    <p class="text-sm text-on-surface-variant leading-relaxed">Lower your AC activity by 2 degrees between 4 PM and 6 PM to avoid peak tariff pricing and reduce grid strain.</p>
+    <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Cooling</span>
+    <button class="text-blue-700 text-sm font-bold flex items-center space-x-1">
+    <span>Details</span>
+    <span class="material-symbols-outlined text-xs">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <!-- Tip Card 2 -->
+    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+    <div class="h-40 relative">
+    <img class="w-full h-full object-cover" data-alt="Modern washing machine in a bright clean laundry room with wooden accents and organized shelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjhLHZbdX_il1lydLfYaztp3hmg5jMfaaX_Qbb0HnNyPKm55i2ALDK72ZzzqmTv0r0ssunoJZTFgEZXHFRyOnXj5R5C05W1vgWIO2EeJht9vBFcDZRhwpkrZ6MsPhKrqkU2q9xxXgEZQMUED9Xk1nJj9rT0GrWUHq3oTLMwM-G9pdnEqhpUgT7oaLgasOOJumjkuE5RTLVbksns_UXtH3RDmA-j15oK4-1Jp3InIVLIfs5OBvOK2U7kQgqFGeqJDg3PpFglzRuSWeu"/>
+    <div class="absolute top-3 left-3 flex gap-2">
+    <span class="px-2 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase rounded tracking-wider">Medium Impact</span>
+    </div>
+    </div>
+    <div class="p-5">
+    <h4 class="text-lg font-bold text-on-background mb-2 group-hover:text-blue-700 transition-colors">The Eco-Wash Delay</h4>
+    <p class="text-sm text-on-surface-variant leading-relaxed">Use the 'Delay Start' feature on your washing machine to run during solar surplus hours or late night intervals.</p>
+    <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Laundry</span>
+    <button class="text-blue-700 text-sm font-bold flex items-center space-x-1">
+    <span>Details</span>
+    <span class="material-symbols-outlined text-xs">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <!-- Tip Card 3 -->
+    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+    <div class="h-40 relative">
+    <img class="w-full h-full object-cover" data-alt="High-end modern induction cooktop in a luxury kitchen with boiling water in a designer pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMy0PhlxobZcJ_4g4Mf9SeMLlF-_DkNtY2SyB6FAWUZHT69Udt45Qsbzuz0ny5-lhDO8unmQcOl3R5vlohm9-yrUTfbhqqfJZyGmYcb45mgqtckZLcMiFAquIe9meoXQbicAKqGdmfXbvUR-oxLoBlywqw2E9uMyMWXpjVv7N6sB6TPmeYssnSGvnVFtzIUabwt393gKzyxnEfJEONPvz-Rpq9bNX9ZvceMD4KN8Q56KHtxXqLKHNXXKHlvDXGzhHKi0MFlg0w59vY"/>
+    <div class="absolute top-3 left-3 flex gap-2">
+    <span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-[10px] font-bold uppercase rounded tracking-wider">Low Impact</span>
+    <span class="px-2 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase rounded tracking-wider">4 PM - 6 PM</span>
+    </div>
+    </div>
+    <div class="p-5">
+    <h4 class="text-lg font-bold text-on-background mb-2 group-hover:text-blue-700 transition-colors">Smart Cooking Habits</h4>
+    <p class="text-sm text-on-surface-variant leading-relaxed">Cover pots while boiling water and use the microwave for small heating tasks to reduce energy consumption by 20%.</p>
+    <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Kitchen</span>
+    <button class="text-blue-700 text-sm font-bold flex items-center space-x-1">
+    <span>Details</span>
+    <span class="material-symbols-outlined text-xs">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <!-- Tip Card 4 -->
+    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+    <div class="h-40 relative">
+    <img class="w-full h-full object-cover" data-alt="Close-up of water droplets falling from a modern shower head with elegant bathroom tiling and atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzmlNYVJl7YfKlpEYRkrcL9kQCQOvMn3CQF4v86Dh5_ybH6eGL5sAEybZJq1lf-n8SqfB_09QtWYaiRw9PT8Dxy2TL98K0iTYGwq-XA1MTc2iAgD3fYl-f5x4NEe8eCvkXSDtTUq3IWXNhwD-bNvzWCAzePLMnID6duNaqbceSQDFgWQGG0L9MkvuDniJc2DWltOPLkbfFUZ-qlnu7-CHPsxTztEHtQS8c9nrFWCYK32iAAW2TB_83yz7ua9xEnrHr0WWzuwWfgnSd"/>
+    <div class="absolute top-3 left-3 flex gap-2">
+    <span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] font-bold uppercase rounded tracking-wider">High Impact</span>
+    </div>
+    </div>
+    <div class="p-5">
+    <h4 class="text-lg font-bold text-on-background mb-2 group-hover:text-blue-700 transition-colors">The 5-Minute Challenge</h4>
+    <p class="text-sm text-on-surface-variant leading-relaxed">Reducing shower time to 5 minutes can save up to 15 gallons of water and significant energy used for heating.</p>
+    <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Water</span>
+    <button class="text-blue-700 text-sm font-bold flex items-center space-x-1">
+    <span>Details</span>
+    <span class="material-symbols-outlined text-xs">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <!-- Tip Card 5 -->
+    <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+    <div class="h-40 relative">
+    <img class="w-full h-full object-cover" data-alt="Solar panels on a residential roof reflecting a bright blue sky with wispy clouds and bright afternoon sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_t0LazH9tTWFhJf0OamJnaPhTE20HMRvoYyiHW4ovkvW8Obf7iqYb2FG2me5J0v5HsFi7e97ChynQX2wQZ0PRYHm_Cdwo-nbV8zNdwy2GEnYe6BmyBC1DPzLbTB98VyChVIHGAak7WY_NRtz4VLl6gPqE1aOkHw64-jAmN217gekRN2mk3jtK77cK9RJWsTEOK523_JQvwlJ_ScxAwONO1DwTtQANhS07eHuu4Ftl9AlZcyp4bL87ckS5TttmR-bJm0zMhaemM_Jh"/>
+    <div class="absolute top-3 left-3 flex gap-2">
+    <span class="px-2 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase rounded tracking-wider">Medium Impact</span>
+    </div>
+    </div>
+    <div class="p-5">
+    <h4 class="text-lg font-bold text-on-background mb-2 group-hover:text-blue-700 transition-colors">Max Solar Self-Consumption</h4>
+    <p class="text-sm text-on-surface-variant leading-relaxed">Run high-wattage appliances during peak sun hours (11 AM - 3 PM) to use your own solar energy instead of grid power.</p>
+    <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Solar</span>
+    <button class="text-blue-700 text-sm font-bold flex items-center space-x-1">
+    <span>Details</span>
+    <span class="material-symbols-outlined text-xs">open_in_new</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <!-- Tip Card 6 (Empty/CTA) -->
+    <div class="bg-slate-50 border-2 border-dashed border-slate-200 rounded-lg flex flex-col items-center justify-center p-8 text-center group cursor-pointer hover:bg-white hover:border-blue-300 transition-all">
+    <div class="w-16 h-16 rounded-full bg-slate-200 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+    <span class="material-symbols-outlined text-slate-400 group-hover:text-blue-700">add</span>
+    </div>
+    <h4 class="text-lg font-bold text-slate-600 mb-2">Request Custom Advice</h4>
+    <p class="text-sm text-slate-400">Can't find what you need? Ask our advisors for a custom energy audit of your home.</p>
+    </div>
+    </div>
+    </div>
+    </main>
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 px-6 py-3 flex justify-between items-center z-50">
+    <button class="flex flex-col items-center space-y-1 text-slate-400">
+    <span class="material-symbols-outlined">dashboard</span>
+    <span class="text-[10px]">Dashboard</span>
+    </button>
+    <button class="flex flex-col items-center space-y-1 text-slate-400">
+    <span class="material-symbols-outlined">trophy</span>
+    <span class="text-[10px]">Rank</span>
+    </button>
+    <button class="flex flex-col items-center space-y-1 text-blue-700">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+    <span class="text-[10px] font-bold">Tips</span>
+    </button>
+    <button class="flex flex-col items-center space-y-1 text-slate-400">
+    <span class="material-symbols-outlined">science</span>
+    <span class="text-[10px]">Lab</span>
+    </button>
+    <button class="flex flex-col items-center space-y-1 text-slate-400">
+    <span class="material-symbols-outlined">settings</span>
+    <span class="text-[10px]">Settings</span>
+    </button>
+    </nav>
+    </body></html>
