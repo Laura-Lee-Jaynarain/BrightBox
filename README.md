@@ -66,8 +66,14 @@ Create or update `backend-NET/appsettings.json` with the following (never commit
 5. Surf to [http://localhost:5713/](http://localhost:5173/)
 
 ## Authors
+*Built by a collaborative student development team.*
 - Donya Pretorius
 - Arnout Coenegrachts
 - Laura-Lee Jaynarain
 - Elcke Van Der Berg
 - Oreatlile Seletisha
+
+  
+Currently deployed internally as a demo. Active development ongoing.
+
+
